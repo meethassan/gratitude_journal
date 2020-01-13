@@ -1,0 +1,1 @@
+insert into gratitude_journal (grateful_for, created_at) VALUES ('job', current_timestamp ());

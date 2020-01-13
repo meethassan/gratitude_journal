@@ -1,0 +1,25 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<!--/* Workaround for bug https://youtrack.jetbrains.com/issue/IDEA-132738 -->
+<!--@thymesVar id="post" type="your.package.Post"-->
+<!--@thymesVar id="title" type="String"-->
+<!--@thymesVar id="content" type="String"-->
+<!--*/-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta chartset="utf-8">
+    <title>Gratitude Journal</title>
+</head>
+<body>
+<h1>Welcome to your gratitude journal</h1>
+<table>
+    <tr>
+    <td>Grateful for</td>
+    <td>Date</td>
+    </tr>
+    <tr th:each="gratitudeNote: ${grate">
+        <td th:text="${gratitudeNote.gratefulFor}">Grateful For</td>
+    </tr>
+</table>
+</body>
+</html>
